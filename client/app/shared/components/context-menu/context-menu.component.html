@@ -1,0 +1,4 @@
+<div class='context-menu' *ngIf="actions" [ngClass]="{'context-menu--open' : open}" [style.top.px]="top" [style.left.px]="left">
+  <teams-action-menu #actionMenu (actionSelect)="actionSelected($event)" [actions]="actions"></teams-action-menu>
+</div>
+

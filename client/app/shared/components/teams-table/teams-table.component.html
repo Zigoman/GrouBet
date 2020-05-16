@@ -1,0 +1,25 @@
+<p-table #tt [columns]="cols" [value]="tableData" sortMode="multiple" [rows]="25" [scrollable]="true"
+         scrollHeight="200px">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns" [pSortableColumn]="col.field.value">
+        {{col.header}}
+        <p-sortIcon [field]="col.field.value"></p-sortIcon>
+      </th>
+    </tr>
+    <tr>
+      <th *ngFor="let col of columns">
+        <teams-input [placeholder]="'FILTER'" [emitOnAnyKey]="true" (text)="tt.filter($event, col.field, 'contains')"></teams-input>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr [pSelectableRow]="rowData">
+      <td *ngFor="let col of columns">
+        {{rowData[col.field]}}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+

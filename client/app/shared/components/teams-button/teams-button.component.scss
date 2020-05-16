@@ -1,0 +1,43 @@
+@import "config";
+
+:host {
+  & {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .button-container {
+    & {
+      cursor: pointer;
+      margin: 0 auto;
+      width: 100%;
+
+      @include teams-font(16, regular);
+      text-align: center;
+      padding: 8px;
+      border-radius: 5px;
+      transition: transform .5s $cubic-bezier;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &__text {
+
+    }
+
+    &--prime {
+
+    }
+
+    &--secondary {
+
+    }
+  }
+}
+
+
+

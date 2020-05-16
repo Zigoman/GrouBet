@@ -1,0 +1,55 @@
+@import "config";
+
+:host {
+
+  .sub-action-item {
+    & {
+      @include teams-font(14, regular);
+    }
+
+    &__item {
+      &{
+
+      }
+
+      &__icon {
+        width: 30px;
+      }
+
+      &__text {
+        & {
+          display: flex;
+          align-items: center;
+          padding: 6px 6px 6px 25px;
+          cursor: pointer;
+          transition: transform .2s, background-color .2s $cubic-bezier;
+        }
+
+        &:hover {
+          transform: scale(1.01);
+
+          opacity: 0.7;
+
+        }
+      }
+
+      &--active {
+
+      }
+
+      &--disabled {
+        .sub-action-item__item__text {
+
+          cursor: not-allowed;
+          background-color: transparent;
+          &:hover {
+
+            cursor: not-allowed;
+            background-color: transparent;
+          }
+        }
+      }
+
+    }
+  }
+}

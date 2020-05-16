@@ -1,0 +1,14 @@
+<div class="check-box">
+
+  <div class="check-box__container" (click)="checkBoxClicked()">
+    <i class="svg-icons-checkbox-{{checkBoxOn ? 'on': 'off'}}"></i>
+  </div>
+
+  <div *ngIf="label" class="check-box__label">
+    <span class="check-box__label__text" (click)="checkBoxClicked()">
+      {{label}}
+    </span>
+  </div>
+
+</div>
+

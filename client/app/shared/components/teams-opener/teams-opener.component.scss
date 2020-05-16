@@ -1,0 +1,44 @@
+@import "config";
+
+:host {
+  & {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .opener {
+    & {
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    &__item {
+      & {
+        display: flex;
+        align-items: center;
+      }
+
+      &__text {
+        & {
+          padding: 2px 0;
+          margin-right: 5px;
+          flex: 1;
+          @include teams-font(16, regular);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &--bold {
+          @include teams-font(18, bold)
+        }
+
+      }
+
+      i {
+        @include teams-font(11, bold)
+
+      }
+    }
+  }
+}

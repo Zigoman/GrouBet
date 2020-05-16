@@ -1,0 +1,13 @@
+<div class="opener">
+  <div class="opener__item">
+    <div class="opener__item__text" [ngClass]='{"opener__item__text--bold" : bold}'>
+      {{text}}
+    </div>
+    <i class="svg-icons-drop-down"></i>
+  </div>
+  <p-overlayPanel #op1 (onHide)="BeforeHide()" [dismissable]="true" [appendTo]="'body'"
+                  [styleClass]="'centerOverlayPanel'">
+    <ng-content>
+    </ng-content>
+  </p-overlayPanel>
+</div>

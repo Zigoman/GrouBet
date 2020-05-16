@@ -1,0 +1,15 @@
+<div class="teams-dropdown">
+<teams-opener #opener [title]="viewText" [bold]="bold" (click)="switchToggle($event)"
+            (BeforeHidePanel)="BeforeHidePanel()">
+  <teams-action-menu
+               [long]="long"
+               [multi]="multi"
+               [multiIsEmpty]="multiActions.length === 0 || !hasSubActions"
+               [actions]="actions"
+               [applyFilter]="applyFilter"
+               (actionSelect)="actionSelected($event)"></teams-action-menu>
+  <teams-button *ngIf="multi && actions?.actions.length > 0" [text]="'Select Actions'" [prime]="true"
+              [action]="'Select Actions'" (buttonClicked)="multiActionsSelected()">
+  </teams-button>
+</teams-opener>
+</div>

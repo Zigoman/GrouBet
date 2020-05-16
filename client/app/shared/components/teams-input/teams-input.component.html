@@ -1,0 +1,7 @@
+<div class="teams-input">
+  <label>
+    <input (keyup)="sendTextByKeyPress($event, input.value)" (focusout)="useFocusedOut && sendText(input.value)" #input
+           class='teams-input__input'
+           placeholder="Enter Value" type="text">
+  </label>
+</div>

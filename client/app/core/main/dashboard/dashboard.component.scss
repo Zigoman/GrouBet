@@ -1,0 +1,20 @@
+:host {
+
+  .dashboard {
+    & {
+      display: flex;
+      height: 100%;
+    }
+
+    &__list {
+      flex: 4;
+      background-color: #2b6dcb;
+    }
+
+    &__main {
+      flex: 12;
+      background-color: #cbb144;
+
+    }
+  }
+}

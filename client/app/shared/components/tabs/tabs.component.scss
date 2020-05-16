@@ -1,0 +1,44 @@
+@import "config";
+
+:host {
+
+  .tabs {
+
+    & {
+      display: flex;
+    }
+
+    &__tab {
+      & {
+        cursor: pointer;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        flex-wrap: wrap;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &--active {
+        background-color: white;
+        color: black;
+      }
+
+      i {
+        @include teams-font(20, icon);
+      }
+
+      &__text {
+        @include teams-font(20, bold);
+        padding: 0 10px;
+        text-align: center;
+        user-select: none;
+      }
+    }
+  }
+}
+

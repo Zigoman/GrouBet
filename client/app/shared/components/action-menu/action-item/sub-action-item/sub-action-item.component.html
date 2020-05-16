@@ -1,0 +1,7 @@
+<div class="sub-action-item" [ngClass]="{'sub-action-item__item--active' : selectedItem}">
+  <div class="sub-action-item__item" (click)="actionClicked(subAction)"
+       [ngClass]="{'sub-action-item__item--disabled' : disabled}">
+    <i *ngIf="subAction.icon" class="svg-icons-{{subAction.icon}} sub-action-item__item__icon"></i>
+    <div class="sub-action-item__item__text">{{subAction.text}}</div>
+  </div>
+</div>

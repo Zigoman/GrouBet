@@ -1,0 +1,89 @@
+:host {
+
+  .modal {
+    & {
+      background: rgba(77, 92, 116, 0.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9;
+    }
+
+    &__header {
+      & {
+        width: 30%;
+        background: white;
+        z-index: 10;
+        border-radius: 2px 2px;
+      }
+
+      &__toolbar {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 5px;
+        font-size: 12px;
+      }
+
+      &__title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      &__project {
+        width: 20%;
+      }
+    }
+
+    &__content {
+      & {
+        width: 30%;
+        background: white;
+        z-index: 10;
+        padding: 24px;
+        overflow: auto;
+      }
+
+      &__project {
+        width: 20%;
+      }
+    }
+
+    &__footer {
+      & {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        background: white;
+        z-index: 10;
+        border-radius: 0 0 2px;
+      }
+
+      &__btn {
+        margin: 10px 10px 20px;
+
+        &__project {
+          max-width: 230px;
+        }
+      }
+
+      &--centered {
+        justify-content: center;
+      }
+
+      &__project {
+        width: 20%;
+      }
+    }
+  }
+}

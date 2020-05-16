@@ -1,0 +1,29 @@
+<div class="action-item">
+  <div class="action-item__item-wrapper">
+    <div class="action-item__open-icon" *ngIf="action.subActions">
+      <teams-icon-button [hidden]="!subMenuOpen"
+                   (buttonClicked)="toggleSubMenu(action)" [action]="'false'" [icon]="'open-papa'"></teams-icon-button>
+      <teams-icon-button [hidden]="subMenuOpen"
+                   (buttonClicked)="toggleSubMenu(action)" [action]="'true'" [icon]="'closed-papa'"></teams-icon-button>
+    </div>
+    <div class="action-item__item" (click)="actionClicked(action)"
+         [ngClass]="{'action-item__item--active' : selectedItem,
+         'action-item__item--no-sub' : !action.subActions,
+         'action-item__item--disabled' : disabled}">
+      <i *ngIf="action.icon" class="svg-icons-{{action.icon}} action-item__item__icon"></i>
+      <div class="action-item__item__text"
+           [ngClass]="{'action-item__item__text--sub-title' : action.subActions}">{{action.text}}
+      </div>
+    </div>
+  </div>
+  <div class="action-item__SubItem" *ngIf="action.subActions" [ngClass]="{'action-item__SubItem--open' : subMenuOpen}">
+    <teams-sub-action-item *ngFor="let subAction of action.subActions | filterBy : 'text' : filterTerm"
+                     [subAction]="subAction"
+                     [parentId]="action.id"
+                     [multi]="true"
+                     [disabled]="disabled"
+                     (selectedSubAction)="SubActionClicked($event)">
+    </teams-sub-action-item>
+  </div>
+
+</div>

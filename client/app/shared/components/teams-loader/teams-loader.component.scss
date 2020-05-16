@@ -1,0 +1,27 @@
+@import "config";
+
+:host {
+  & {
+    //background: rgba(77, 92, 116, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .teams-loader {
+    & {
+    }
+
+    &__icon {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}

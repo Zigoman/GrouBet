@@ -1,0 +1,31 @@
+@import "config";
+
+:host{
+  &{
+
+  }
+
+  .expand-node {
+    & {
+      max-width: 240px;
+      height: 120px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    &__levels {
+      & {
+        display: flex;
+        align-items: center;
+      }
+
+      &__text {
+        @include teams-font(14, regular);
+        padding-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "config";
+
+
+:host {
+  & {
+  }
+
+  .action-menu {
+    & {
+      overflow: hidden;
+      padding: 10px 5px;
+      @include teams-font(16, reular);
+    }
+
+    &__wrapper {
+      & {
+        width: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100%;
+      }
+
+      &--short {
+        max-height: 220px;
+      }
+
+      &--long {
+        max-height: 400px;
+      }
+
+      &__title {
+        @include teams-font(16, semi-bold);
+        padding: 10px 6px;
+      }
+    }
+  }
+}

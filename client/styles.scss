@@ -1,0 +1,115 @@
+@import "helpers/reset";
+@import "helpers/helpers";
+@import "config";
+
+html, body {
+  font-size: 10px;
+  direction: ltr;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Assistant", sans-serif;
+
+  input {
+    font-family: "Assistant", sans-serif;
+  }
+}
+
+* {
+  & {
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  &::-webkit-scrollbar-button {
+    width: 0;
+    height: 40px;
+  }
+  &::-webkit-scrollbar-thumb {
+
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    /*background: lighten($prime-green, 10%);*/
+  }
+  &::-webkit-scrollbar-thumb:active {
+   /* background: darken($prime-green, 10%);*/
+  }
+  &::-webkit-scrollbar-track {
+    /*background: $light-grey;
+    border: 3px solid $white;*/
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-track:hover {
+   /* background: lighten($light-grey, 10%);;*/
+  }
+  &::-webkit-scrollbar-track:active {
+    /*background: darken($light-grey, 10%);*/
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* --------------------------------*/
+
+}
+
+/* The container */
+.radio-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.check-mark {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-bottom: 7px;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input .check-mark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked .check-mark {
+  background-color: #888888;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.check-mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked .check-mark:after {
+  display: block;
+}

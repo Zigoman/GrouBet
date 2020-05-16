@@ -1,0 +1,33 @@
+@import "config";
+
+:host {
+
+  .check-box {
+    & {
+      width: 100%;
+      padding: 0 3px;
+      display: flex;
+    }
+
+    &__container {
+      & {
+        @include teams-font(15, icon);
+        cursor: pointer;
+      }
+
+    }
+
+    &__label {
+      & {
+        padding-left: 10px;
+        flex: 1;
+        display: flex;
+      }
+
+      &__text {
+        cursor: pointer;
+        @include teams-font(14, regular);
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<div class="tabs">
+    <div *ngFor="let tab of tabs" class="tabs__tab" (click)="changeTab(tab.action)"
+         [ngClass]="{'tabs__tab--active': tab.action === selectedView}">
+        <i *ngIf="tab.icon" class="ui-icons-{{tab.icon}}"></i>
+        <div class="tabs__tab__text">
+            {{tab.name}}
+        </div>
+    </div>
+</div>

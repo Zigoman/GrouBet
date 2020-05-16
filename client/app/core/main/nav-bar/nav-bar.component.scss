@@ -1,0 +1,26 @@
+:host {
+  & {
+    z-index: 1;
+    background-color: white;
+    box-shadow: 0 0 11px 1px #00000030;
+  }
+
+  .nav-bar {
+    & {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__person {
+
+    }
+
+    &__tabs {
+
+    }
+
+    &__logout {
+
+    }
+  }
+}

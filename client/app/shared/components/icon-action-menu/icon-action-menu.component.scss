@@ -1,0 +1,18 @@
+@import "config";
+
+:host {
+  & {
+  }
+
+  .icon-action-menu {
+    & {
+      position: relative;
+    }
+    &__menu {
+      position: absolute;
+      right: 32px;
+      bottom: 0;
+
+    }
+  }
+}

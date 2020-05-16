@@ -1,0 +1,19 @@
+@import "config";
+
+:host {
+
+  .teams-input {
+
+    &__input {
+      padding: 5px;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      width: 100%;
+      border: none;
+      background: none;
+      outline: none;
+      color: inherit;
+    }
+  }
+}
